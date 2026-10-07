@@ -1,0 +1,175 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { /* Variables de color y tipografía */
+
+    --navy: #1B1B3A;
+    --navy-light: #2C2C54;
+    --navy-dark: #101022;
+    --magenta: #FF3E7F;
+    --amber: #FFB627;
+    --cream: #F5EFE0;
+    --mint: #4CE0D2;
+    --white: #ffffff;
+    --max-width: 1200px;
+
+    --font-heading: 'Bungee', serif;
+    --font-body: 'Poppins', sans-serif;
+    }
+
+body{ 
+    background-color: var(--navy);
+    color: var(--cream);
+    /* Esto evita que el footer se suba */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+h1,h2,h3{ /* Color encabezados */
+    font-family: var(--font-heading);
+}
+img{ /* Evita que las imágenes se salgan del contenedor */
+    max-width: 100%;
+    display: block;
+}
+
+
+a{ /* Estilo para enlaces */
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+
+.btn-primary{ /* Estilo para botones primarios */
+    background-color: var(--navy);
+    color: var(--cream);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover{ /* Efecto hover para botones primarios */
+    background-color: var(--magenta);
+    transform: translateY(-3px);
+    text-decoration: underline;
+}
+/* Header y Nav*/
+header{
+    background-color: var(--navy-dark);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar ul { /* Estilo para la lista de navegación */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si no caben en una sola línea */
+    Text-align: center;/* Alinea los elementos al centro */
+    gap: 1rem;
+}
+.navbar { /* Estilo para la barra de navegación */
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Esto asegura que el logo y los enlaces estén en extremos opuestos */
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.logo { /* Estilo para el logo */
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    gap: 0.5rem;
+    display: flex;
+    align-items: start;
+}
+.logo:hover { /* Efecto hover para el logo */   
+    color: var(--magenta);
+    transform: translateY(-3px)
+}
+.logo i { /* Estilo para el icono del logo */
+    color: var(--magenta);
+    font-size: 1.8rem;
+}
+
+.nav-links { /* Estilo para los enlaces de navegación */
+    display: flex; /* Cambiado a flex para que los enlaces estén en línea */
+    gap: 1.8rem;
+}
+.nav-links a { /* Estilo para los enlaces de navegación */
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    display:flex;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: var(--magenta);
+    text-decoration: underline;
+    transform: translateY(-3px)
+}
+footer{ /* Estilo para el footer */
+    background-color: var(--navy-dark);
+    padding: 2rem 1rem;
+    margin-top: auto; /* Esto asegura que el footer se mantenga en la parte inferior de la página */
+    display: flex;
+
+}
+.footer-nav{ /* Estilo para la lista de navegación del footer */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si no caben en una sola línea */
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    justify-content: normal;
+    text-align: start;
+    padding-left: 2rem;
+}
+.footer-nav li:hover{ /* Efecto hover para los elementos de la lista del footer */
+    color: var(--magenta);
+    text-decoration: underline; /* Esto subraya el texto al hacer hover */
+    transform: translateY(-3px) /* Esto hace que el elemento se mueva hacia arriba al hacer hover */
+
+}
+.footer-nav a:hover{
+    color: var(--magenta);
+    text-decoration: underline;
+}
+.footer-social {
+  display: flex;             /* corregido: flex en vez de column */
+  flex-direction: column;    /* para que los elementos vayan hacia abajo */
+  justify-content: normal;
+  text-align: center;
+  gap: 1.2rem;
+  margin: auto;              /* con su punto y coma */
+}
+
+.footer-social p{ /* Estilo para el texto de la sección social del footer */
+        font-family: var(--font-body);
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+.footer-social a{ /* Estilo para los enlaces de la sección social del footer */
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+.footer-social a:hover{ /* Efecto hover para los enlaces de la sección social del footer */
+    transition: color 0.3s ease;
+    color: var(--magenta);
+    text-decoration: underline;
+    transform: translateY(-3px)
+}
+.active{
+    color: var(--magenta);
+    text-decoration: underline;
+}

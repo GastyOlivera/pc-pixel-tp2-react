@@ -1,0 +1,59 @@
+.galeria-grid {/* Contenedor para la galería de imágenes */
+    max-width: var(--max-width);
+    margin: 0 auto;
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+.galeria-header { /* titulo */
+    margin: 2rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+}
+.galeria-header h1 { /* Estilo para el título de la galería */  
+    font-size: 3rem;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+.galeria-header h2 { /* Estilo para el subtítulo de la galería */
+    font-size: 1.2rem;
+    font-family: var(--font-body);
+    justify-content: center;
+    text-align: center;
+    margin: 1rem 1rem;
+}
+.galeria-item {/* Estilo para las cards de la galería */
+    flex: 1 1 300px;
+    border-radius: 8px;
+    margin: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+.galeria-item img { /* Estilo para las imágenes de la galería */
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.galeria-item:hover { /* Efecto hover para las cards de la galería */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+;
+
+}
+.texto-imagen { /* Estilo para el texto que aparece sobre las imágenes de la galería */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 0.5rem;
+    color:transparent
+}
+
+.texto-imagen:hover { /* Efecto hover para el texto que aparece sobre las imágenes de la galería */
+    color: var(--white);
+    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
